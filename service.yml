@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+  - name: Install httpd service
+    yum: pkg=httpd state=latest
+  - name: Restart httpd service
+    service: name=httpd enabled=yes state=started
+
+
